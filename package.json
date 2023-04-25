@@ -2,7 +2,7 @@
   "name": "ckeditor5-luongthanhnhi-custom-build",
   "author": "CKSource",
   "description": "A custom CKEditor 5 build made by the CKEditor 5 online builder.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "SEE LICENSE IN LICENSE.md",
   "main": "./build/ckeditor.js",
   "devDependencies": {
@@ -35,11 +35,13 @@
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^4.2.3",
     "webpack": "^5.79.0",
-    "webpack-cli": "^4.10.0",
-    "@ckeditor/ckeditor5-react": "^6.0.0"
+    "webpack-cli": "^4.10.0"
   },
   "scripts": {
     "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-react": "^6.0.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
