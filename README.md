@@ -27,40 +27,9 @@ How to use, Ex:
 import ClassicEditor from "ckeditor5-luongthanhnhi-custom-build/build/ckeditor";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 
-const FormCkeditor = ({ name, label, rules, data, onFocus, ...props }) => {
+const CkeditorComponent = ({ name, label, rules, data, onFocus, ...props }) => {
   const config = {
     extraPlugins: [uploadPlugin],
-    toolbar: [
-      "undo",
-      "redo",
-      "|",
-      "heading",
-      "|",
-      "fontfamily",
-      "fontsize",
-      "fontColor",
-      "fontBackgroundColor",
-      "|",
-      "bold",
-      "italic",
-      "strikethrough",
-      "subscript",
-      "superscript",
-      "code",
-      "|",
-      "link",
-      "uploadImage",
-      "blockQuote",
-      "codeBlock",
-      "|",
-      "alignment",
-      "|",
-      "bulletedList",
-      "numberedList",
-      "todoList",
-      "outdent",
-      "indent",
-    ],
   };
 
   function uploadAdapter(loader) {
@@ -88,5 +57,5 @@ const FormCkeditor = ({ name, label, rules, data, onFocus, ...props }) => {
   );
 };
 
-export default FormCkeditor;
+export default CkeditorComponent;
 ```
