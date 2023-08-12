@@ -18,7 +18,8 @@ import Image from "@ckeditor/ckeditor5-image/src/image.js";
 import ImageCaption from "@ckeditor/ckeditor5-image/src/imagecaption.js";
 import ImageStyle from "@ckeditor/ckeditor5-image/src/imagestyle.js";
 import ImageToolbar from "@ckeditor/ckeditor5-image/src/imagetoolbar.js";
-import ImageUpload from "@ckeditor/ckeditor5-image/src/imageupload.js";
+// import ImageUpload from "@ckeditor/ckeditor5-image/src/imageupload.js";
+import { ImageResize, ImageUpload } from "@ckeditor/ckeditor5-image";
 import Indent from "@ckeditor/ckeditor5-indent/src/indent.js";
 import Italic from "@ckeditor/ckeditor5-basic-styles/src/italic.js";
 import Link from "@ckeditor/ckeditor5-link/src/link.js";
@@ -48,6 +49,7 @@ Editor.builtinPlugins = [
   Heading,
   Image,
   ImageCaption,
+  ImageResize,
   ImageStyle,
   ImageToolbar,
   ImageUpload,
@@ -99,6 +101,24 @@ Editor.defaultConfig = {
       "imageStyle:inline",
       "imageStyle:block",
       "imageStyle:side",
+      "imageResize",
+      "|",
+      "imageTextAlternative",
+    ],
+    resizeUnit: "%",
+    resizeOptions: [
+      {
+        name: "imageResize:original",
+        value: null,
+      },
+      {
+        name: "imageResize:75",
+        value: "75",
+      },
+      {
+        name: "imageResize:50",
+        value: "50",
+      },
     ],
   },
   table: {
